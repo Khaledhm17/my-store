@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MY STORE</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Checkout</h2>
+        <div class="checkout-container">
+            <div class="product-details">
+                <img id="product-image" src="" alt="Product Image">
+                <h3 id="product-name"></h3>
+                <p id="product-price"></p>
+            </div>
+
+            <form id="checkout-form">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="month" id="expiry-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" required>
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // استرجاع بيانات المنتج من الـ localStorage
+        document.addEventListener("DOMContentLoaded", function () {
+            const productName = localStorage.getItem("productName");
+            const productPrice = localStorage.getItem("productPrice");
+            const productImage = localStorage.getItem("productImage");
+
+            if (productName && productPrice && productImage) {
+                document.getElementById("product-name").innerText = productName;
+                document.getElementById("product-price").innerText = "$" + productPrice;
+                document.getElementById("product-image").src = productImage;
+            } else {
+                document.querySelector(".product-details").innerHTML = "<p>No product selected.</p>";
+            }
+        });
+
+        // عند إتمام الدفع، يتم التوجيه إلى صفحة النجاح
+        document.getElementById("checkout-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+            alert("✅ Payment processed successfully!");
+            window.location.href = "success.html"; // التوجيه إلى صفحة النجاح
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+CREATE DATABASE sport_store;
+USE sport_store;
+
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    price DECIMAL(10,2),
+    image VARCHAR(255)
+);
+
+CREATE TABLE cart (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_id INT,
+    quantity INT,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);

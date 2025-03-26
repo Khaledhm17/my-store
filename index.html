@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Sport</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">MY STORE</div>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Category</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Our Products</h2>
+      <div class="products">
+        <div class="product">
+          <img src="images/photo_2025-02-26_22-22-57.jpg" />
+          <h3>SHOES SPORT</h3>
+          <p>$20.00</p>
+          <button onclick="goToCheckout('SHOES SPORT', '$20.00', 'images/photo_2025-02-26_22-22-57.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/gant.jpg" alt="Product 2" />
+          <h3>GLOVE BOX</h3>
+          <p>$25.00</p>
+          <button onclick="goToCheckout('GLOVE BOX', '$25.00', 'images/gant.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/bag.jpg" alt="Product 3" />
+          <h3>BAG</h3>
+          <p>$10.00</p>
+          <button onclick="goToCheckout('BAG', '$10.00', 'images/bag.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/glove.jpg" alt="Product 4" />
+          <h3>GLOVE</h3>
+          <p>$12.00</p>
+          <button onclick="goToCheckout('GLOVE', '$12.00', 'images/glove.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/techert.jpg" alt="Product 5" />
+          <h3>TECHERT</h3>
+          <p>$8.00</p>
+          <button onclick="goToCheckout('TECHERT', '$8.00', 'images/techert.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/complet.jpg" alt="Product 6" />
+          <h3>FULL SPORT SUIT</h3>
+          <p>$38.25</p>
+          <button onclick="goToCheckout('FULL SPORT SUIT', '$38.25', 'images/complet.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/miniball.jpg" alt="Product 7" />
+          <h3>BOX BALL</h3>
+          <p>$3.35</p>
+          <button onclick="goToCheckout('BOX BALL', '$3.35', 'images/miniball.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/techert2.jpg" alt="Product 8" />
+          <h3>TECHERT WILSON</h3>
+          <p>$7.50</p>
+          <button onclick="goToCheckout('TECHERT WILSON', '$7.50', 'images/techert2.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/ball.jpg" alt="Product 9" />
+          <h3>BALL CHAMPIONS LEAGUE</h3>
+          <p>$38.99</p>
+          <button onclick="goToCheckout('BALL CHAMPIONS LEAGUE', '$38.99', 'images/ball.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/shoes2.jpg" alt="Product 10" />
+          <h3>SHOES NIKE ORIGINAL</h3>
+          <p>$49.99</p>
+          <button onclick="goToCheckout('SHOES NIKE ORIGINAL', '$49.99', 'images/shoes2.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/compressur.jpg" alt="Product 11" />
+          <h3>AIR PRESSURE</h3>
+          <p>$4.99</p>
+          <button onclick="goToCheckout('AIR PRESSURE', '$4.99', 'images/compressur.jpg')">Buy Now</button>
+        </div>
+        <div class="product">
+          <img src="images/forsave.jpg" alt="Product 12" />
+          <h3>KNEE SAVE</h3>
+          <p>$12.23</p>
+          <button onclick="goToCheckout('KNEE SAVE', '$12.23', 'images/forsave.jpg')">Buy Now</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 My Store | All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      function goToCheckout(name, price, image) {
+        localStorage.setItem("productName", name);
+        localStorage.setItem("productPrice", price);
+        localStorage.setItem("productImage", image);
+        window.location.href = "checkout.html";
+      }
+    </script>
+  </body>
+</html>
