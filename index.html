@@ -11,106 +11,219 @@
     <title>Store Sport</title>
   </head>
   <body>
+    <!-- شريط التنقل -->
     <nav>
       <div class="logo">MY STORE</div>
+
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+
       <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Category</a></li>
-        <li><a href="#">Blog</a></li>
+        
+        <li><a href="#" class="active" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About</a></li>
+        <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="#" onclick="showSection('category')">Category</a></li>
+        <li><a href="#" onclick="showSection('blog')">Blog</a></li>
       </ul>
     </nav>
 
+    <!-- الأقسام -->
     <main>
-      <h2>Our Products</h2>
-      <div class="products">
-        <div class="product">
-          <img src="images/photo_2025-02-26_22-22-57.jpg" />
-          <h3>SHOES SPORT</h3>
-          <p>$20.00</p>
-          <button onclick="goToCheckout('SHOES SPORT', '$20.00', 'images/photo_2025-02-26_22-22-57.jpg')">Buy Now</button>
+      <!-- الصفحة الرئيسية (جميع المنتجات) -->
+      <section id="home" class="section active-section">
+        <h2>Our Products</h2>
+        <div class="products">
+          <div class="product">
+            <img src="images/photo_2025-02-26_22-22-57.jpg" />
+            <h3>SHOES SPORT</h3>
+            <p>$20.00</p>
+            <button
+              onclick="goToCheckout('SHOES SPORT', '$20.00', 'images/photo_2025-02-26_22-22-57.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/gant.jpg" />
+            <h3>GLOVE BOX</h3>
+            <p>$25.00</p>
+            <button
+              onclick="goToCheckout('GLOVE BOX', '$25.00', 'images/gant.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/bag.jpg" />
+            <h3>BAG</h3>
+            <p>$10.00</p>
+            <button onclick="goToCheckout('BAG', '$10.00', 'images/bag.jpg')">
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/glove.jpg" />
+            <h3>GLOVE</h3>
+            <p>$12.00</p>
+            <button
+              onclick="goToCheckout('GLOVE', '$12.00', 'images/glove.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/techert.jpg" />
+            <h3>TECHERT</h3>
+            <p>$8.00</p>
+            <button
+              onclick="goToCheckout('TECHERT', '$8.00', 'images/techert.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/complet.jpg" />
+            <h3>FULL SPORT SUIT</h3>
+            <p>$38.25</p>
+            <button
+              onclick="goToCheckout('FULL SPORT SUIT', '$38.25', 'images/complet.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/miniball.jpg" />
+            <h3>BOX BALL</h3>
+            <p>$3.35</p>
+            <button
+              onclick="goToCheckout('BOX BALL', '$3.35', 'images/miniball.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/techert2.jpg" />
+            <h3>TECHERT WILSON</h3>
+            <p>$7.50</p>
+            <button
+              onclick="goToCheckout('TECHERT WILSON', '$7.50', 'images/techert2.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/ball.jpg" />
+            <h3>BALL CHAMPIONS LEAGUE</h3>
+            <p>$38.99</p>
+            <button
+              onclick="goToCheckout('BALL CHAMPIONS LEAGUE', '$38.99', 'images/ball.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/shoes2.jpg" />
+            <h3>SHOES NIKE ORIGINAL</h3>
+            <p>$49.99</p>
+            <button
+              onclick="goToCheckout('SHOES NIKE ORIGINAL', '$49.99', 'images/shoes2.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/compressur.jpg" />
+            <h3>AIR PRESSURE</h3>
+            <p>$4.99</p>
+            <button
+              onclick="goToCheckout('AIR PRESSURE', '$4.99', 'images/compressur.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="product">
+            <img src="images/forsave.jpg" />
+            <h3>KNEE SAVE</h3>
+            <p>$12.23</p>
+            <button
+              onclick="goToCheckout('KNEE SAVE', '$12.23', 'images/forsave.jpg')"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
-        <div class="product">
-          <img src="images/gant.jpg" alt="Product 2" />
-          <h3>GLOVE BOX</h3>
-          <p>$25.00</p>
-          <button onclick="goToCheckout('GLOVE BOX', '$25.00', 'images/gant.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/bag.jpg" alt="Product 3" />
-          <h3>BAG</h3>
-          <p>$10.00</p>
-          <button onclick="goToCheckout('BAG', '$10.00', 'images/bag.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/glove.jpg" alt="Product 4" />
-          <h3>GLOVE</h3>
-          <p>$12.00</p>
-          <button onclick="goToCheckout('GLOVE', '$12.00', 'images/glove.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/techert.jpg" alt="Product 5" />
-          <h3>TECHERT</h3>
-          <p>$8.00</p>
-          <button onclick="goToCheckout('TECHERT', '$8.00', 'images/techert.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/complet.jpg" alt="Product 6" />
-          <h3>FULL SPORT SUIT</h3>
-          <p>$38.25</p>
-          <button onclick="goToCheckout('FULL SPORT SUIT', '$38.25', 'images/complet.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/miniball.jpg" alt="Product 7" />
-          <h3>BOX BALL</h3>
-          <p>$3.35</p>
-          <button onclick="goToCheckout('BOX BALL', '$3.35', 'images/miniball.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/techert2.jpg" alt="Product 8" />
-          <h3>TECHERT WILSON</h3>
-          <p>$7.50</p>
-          <button onclick="goToCheckout('TECHERT WILSON', '$7.50', 'images/techert2.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/ball.jpg" alt="Product 9" />
-          <h3>BALL CHAMPIONS LEAGUE</h3>
-          <p>$38.99</p>
-          <button onclick="goToCheckout('BALL CHAMPIONS LEAGUE', '$38.99', 'images/ball.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/shoes2.jpg" alt="Product 10" />
-          <h3>SHOES NIKE ORIGINAL</h3>
-          <p>$49.99</p>
-          <button onclick="goToCheckout('SHOES NIKE ORIGINAL', '$49.99', 'images/shoes2.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/compressur.jpg" alt="Product 11" />
-          <h3>AIR PRESSURE</h3>
-          <p>$4.99</p>
-          <button onclick="goToCheckout('AIR PRESSURE', '$4.99', 'images/compressur.jpg')">Buy Now</button>
-        </div>
-        <div class="product">
-          <img src="images/forsave.jpg" alt="Product 12" />
-          <h3>KNEE SAVE</h3>
-          <p>$12.23</p>
-          <button onclick="goToCheckout('KNEE SAVE', '$12.23', 'images/forsave.jpg')">Buy Now</button>
-        </div>
-      </div>
+      </section>
+
+      <!-- صفحة "من نحن" -->
+      <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+          Welcome to My Store! We specialize in sports equipment and apparel.
+        </p>
+      </section>
+
+      <!-- صفحة "اتصل بنا" -->
+      <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: support@mystore.com</p>
+        <p>Phone: +123 456 789</p>
+      </section>
+
+      <!-- صفحة "الفئات" -->
+      <section id="category" class="section">
+        <h2>Categories</h2>
+        <ul>
+          <li>Sports Shoes</li>
+          <li>Gloves</li>
+          <li>Bags</li>
+          <li>Sportswear</li>
+        </ul>
+      </section>
+
+      <!-- صفحة "المدونة" -->
+      <section id="blog" class="section">
+        <h2>Our Blog</h2>
+        <p>Stay last products always.</p>
+      </section>
     </main>
 
+    <!-- الفوتر -->
     <footer>
       <p>&copy; 2025 My Store | All Rights Reserved.</p>
     </footer>
 
+    <!-- كود JavaScript -->
     <script>
+      function showSection(sectionId) {
+        // إخفاء جميع الأقسام
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section) => {
+          section.style.display = "none";
+        });
+
+        // عرض القسم المطلوب
+        document.getElementById(sectionId).style.display = "block";
+
+        // تحديث الروابط النشطة
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => link.classList.remove("active"));
+        event.target.classList.add("active");
+      }
+
       function goToCheckout(name, price, image) {
         localStorage.setItem("productName", name);
         localStorage.setItem("productPrice", price);
         localStorage.setItem("productImage", image);
         window.location.href = "checkout.html";
       }
+
+      // اجعل الصفحة الرئيسية تظهر عند التحميل
+      document.addEventListener("DOMContentLoaded", function () {
+        showSection("home");
+      });
     </script>
   </body>
 </html>
